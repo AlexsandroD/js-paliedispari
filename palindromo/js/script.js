@@ -47,17 +47,57 @@
 //     console.log(numeri[i])//2
 // } 
 
+// palindromo con reverse 
+
+// let parola = prompt('inserisci una parola ');
+
+// if(parola == reverse(parola)){
+//     console.log(parola + 'questa parola é palindroma')
+// }else{
+//     console.log(parola + ' questa parola non é palindroma')
+// }
+
+// function reverse(s){
+//     return s.split("").reverse().join("");
+// }
 
 
-let parola = prompt('inserisci una parola ')
-reverse(parola)
 
-if(parola == reverse(parola)){
-    console.log(parola + 'questa parola é palindroma')
+let parola = prompt('inserisci una parola ');
+
+if(isPalindromo(parola)){
+    console.log('la parola é palindromo ');
 }else{
-    console.log(parola + ' questa parola non é palindroma')
+    console.log('la parola non é palindroma ');
 }
 
-function reverse(s){
-    return s.split("").reverse().join("");
-}
+
+
+function isPalindromo(word){
+    for(let i = 0; i < word.length/2; i++){
+        if(word[i] != word[word.length -(i+1)]){
+            return false;
+        } 
+    } 
+    return true;
+}                                                                                        
+
+// function power (base,esponente){
+//     for(  = 0 ; i < esponente; i++){ 
+//         base = base * base;
+        
+//     }
+//    return base;
+// }
+
+// const b = 2;
+// const p = 10;
+// let res = power(b,p);
+
+// console.log(res);
+
+
+
+
+
+
