@@ -1,11 +1,52 @@
 
 
-const numeroPari = document.getElementById('pari');
-const numeroDispari = document.getElementById('dispari');
+// const numeroPari = document.getElementById('pari');
+// const numeroDispari = document.getElementById('dispari');
 
 
-numeroPari.addEventListener('click', function(){
+// numeroPari.addEventListener('click', function(){
+//     let numero = parseInt(prompt('scegliere un numero da 1 a 5'))
+//     while(numero < 0 || numero > 5){
+//         numero = parseInt(prompt('scegliere un numero da 1 a 5'))
+//     }
+//     console.log(numero)
+//     const computer = random(1,5);
+//     console.log(computer);
+//     const somma = sum(numero,computer) ;
+//     document.getElementById('result').innerHTML = somma + verificaDispari(somma);
+// })
+
+// numeroDispari.addEventListener('click', function(){
+//     let numero = parseInt(prompt('scegliere un numero da 1 a 5'))
+//     while(numero < 0 || numero > 5){
+//         numero = parseInt(prompt('scegliere un numero da 1 a 5'))
+//     }
+//     console.log(numero)
+//     const computer = random(1,5);
+//     console.log(computer);
+//     const somma = sum(numero,computer) ;
+//     document.getElementById('result').innerHTML = somma  + verificaDispari(somma);
+// })
+
+
+const scelta = prompt('scegli tra pari e dispari');
+// const array = ['pari','dispari']
+// while(scelta !== array[0] || scelta !== array[1]){
+//     console.log(errore)
+// }
+
+if(scelta == 'pari'){
+
     let numero = parseInt(prompt('scegliere un numero da 1 a 5'))
+    while(numero < 0 || numero > 5){      numero = parseInt(prompt('scegliere un numero da 1 a 5'))    }
+    console.log(numero)
+    const computer = random(1,5);
+    console.log(computer);
+    const somma = sum(numero,computer) ;
+    document.getElementById('result').innerHTML = somma + verificaDispari(somma);
+
+}else if(scelta == 'dispari'){
+        let numero = parseInt(prompt('scegliere un numero da 1 a 5'))
     while(numero < 0 || numero > 5){
         numero = parseInt(prompt('scegliere un numero da 1 a 5'))
     }
@@ -13,23 +54,8 @@ numeroPari.addEventListener('click', function(){
     const computer = random(1,5);
     console.log(computer);
     const somma = sum(numero,computer) ;
-    console.log(verificaPari(somma))
-})
-
-numeroDispari.addEventListener('click', function(){
-    let numero = parseInt(prompt('scegliere un numero da 1 a 5'))
-    while(numero < 0 || numero > 5){
-        numero = parseInt(prompt('scegliere un numero da 1 a 5'))
-    }
-    console.log(numero)
-    const computer = random(1,5);
-    console.log(computer);
-    const somma = sum(numero,computer) ;
-    console.log(verificaDispari(somma));
-})
-
-
-
+    document.getElementById('result').innerHTML = somma  + verificaDispari(somma);
+}
 
 
 function random(min, max) {
@@ -37,19 +63,19 @@ function random(min, max) {
   }
 
 function sum(num1, num2){
-    num1 + num2;
+    return num1 + num2;
 }
 
-function verificaDispari(valore){
-    if(valore % 2 !== 0){
-        return 'giocatore 1 vince';
+function verificaDispari(valoreDisp){
+    if(valoreDisp % 2 !== 0){
+        return ' giocatore 1 Dispari  vince';
     }
-    return 'computer vince';
+    return ' computer Pari vince';
 }
 
-function verificaPari(valore){
-    if(valore % 2 == 0){
-        return 'giocatore 1 vince';
+function verificaPari(valorePari){
+    if(valorePari % 2 == 0){
+        return 'giocatore 1 Pari  vince';
     }
-    return 'computer vince';
+    return 'computer Dispari vince';
 }
