@@ -29,11 +29,11 @@
 // })
 
 
-const scelta = prompt('scegli tra pari e dispari');
-// const array = ['pari','dispari']
-// while(scelta !== array[0] || scelta !== array[1]){
-//     console.log(errore)
-// }
+let scelta = prompt('scegli tra pari e dispari');
+
+while(scelta !== 'pari' && scelta !== 'dispari'){
+    scelta = prompt('scegli tra pari e dispari');
+}
 
 if(scelta == 'pari'){
 
