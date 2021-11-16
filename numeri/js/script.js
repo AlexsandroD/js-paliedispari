@@ -55,6 +55,8 @@ if(scelta == 'pari'){
     console.log(computer);
     const somma = sum(numero,computer) ;
     document.getElementById('result').innerHTML = somma  + verificaDispari(somma);
+}else{
+    alert('non hai inserito un valore corretto')
 }
 
 
